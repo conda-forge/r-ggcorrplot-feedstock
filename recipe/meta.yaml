@@ -1,4 +1,4 @@
-{% set version = '0.1.1' %}
+{% set version = "0.1.2" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/ggcorrplot_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/ggcorrplot/ggcorrplot_{{ version }}.tar.gz
-  sha256: a1c0b3230e0893b261b53ffdcce56c0afc4dd41640854be37d0bf9a72f0e5812
+  sha256: 23c192c8c8e074d5835fe00196ce5d80f4b37990eed432e6ba5f3f3953db5d8b
 
 build:
   number: 0
