@@ -14,9 +14,8 @@ Summary: The 'ggcorrplot' package can be used to visualize easily a correlation 
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-ggcorrplot-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-ggcorrplot-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-ggcorrplot-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-ggcorrplot-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-ggcorrplot-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-ggcorrplot-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-ggcorrplot-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-ggcorrplot-feedstock)
 
 Current release info
 ====================

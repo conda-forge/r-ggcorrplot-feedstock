@@ -15,8 +15,8 @@ source:
   sha256: 23c192c8c8e074d5835fe00196ce5d80f4b37990eed432e6ba5f3f3953db5d8b
 
 build:
-  number: 0
-  skip: true  # [win32]
+  noarch: generic
+  number: 1000
   rpaths:
     - lib/R/lib/
     - lib/
@@ -44,8 +44,7 @@ about:
     the significance level on the plot. It also includes a function for computing a
     matrix of correlation p-values.
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-2'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
