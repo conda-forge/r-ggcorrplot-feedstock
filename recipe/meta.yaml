@@ -1,5 +1,4 @@
-{% set version = "0.1.3" %}
-
+{% set version = '0.1.3' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,21 +7,23 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: ggcorrplot_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/ggcorrplot_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/ggcorrplot/ggcorrplot_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/ggcorrplot_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/ggcorrplot/ggcorrplot_{{ version }}.tar.gz
   sha256: 2b9085b72b14e616edb3cda43159dfcb68675ea7389fbaa8a041f920c2a72942
 
 build:
-  noarch: generic
+  merge_build_host: True  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
     - r-ggplot2
     - r-reshape2
@@ -33,11 +34,11 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('ggcorrplot')"  # [not win]
+    - $R -e "library('ggcorrplot')"           # [not win]
     - "\"%R%\" -e \"library('ggcorrplot')\""  # [win]
 
 about:
-  home: http://www.sthda.com
+  home: http://www.sthda.com/english/wiki/ggcorrplot
   license: GPL-2
   summary: The 'ggcorrplot' package can be used to visualize easily a correlation matrix using
     'ggplot2'. It provides a solution for reordering the correlation matrix and displays
@@ -48,8 +49,28 @@ about:
 
 extra:
   recipe-maintainers:
-    - cbrueffer
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
+    - conda-forge/r
+
+# Package: ggcorrplot
+# Type: Package
+# Title: Visualization of a Correlation Matrix using 'ggplot2'
+# Version: 0.1.3
+# Date: 2019-05-19
+# Authors@R: c( person("Alboukadel", "Kassambara", role = c("aut", "cre"), email = "alboukadel.kassambara@gmail.com"))
+# Description: The 'ggcorrplot' package can be used to visualize easily a correlation matrix using 'ggplot2'. It provides a solution for reordering the correlation matrix and displays the significance level on the plot. It also includes a function for computing a matrix of correlation p-values.
+# License: GPL-2
+# LazyData: TRUE
+# Encoding: UTF-8
+# Depends: ggplot2
+# Imports: reshape2, stats
+# Suggests: knitr, spelling
+# URL: http://www.sthda.com/english/wiki/ggcorrplot
+# BugReports: https://github.com/kassambara/ggcorrplot/issues
+# RoxygenNote: 6.1.1
+# Language: en-US
+# NeedsCompilation: no
+# Packaged: 2019-05-19 09:44:53 UTC; kassambara
+# Author: Alboukadel Kassambara [aut, cre]
+# Maintainer: Alboukadel Kassambara <alboukadel.kassambara@gmail.com>
+# Repository: CRAN
+# Date/Publication: 2019-05-19 10:10:02 UTC
