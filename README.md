@@ -1,11 +1,11 @@
-About r-ggcorrplot
-==================
+About r-ggcorrplot-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ggcorrplot-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.sthda.com/english/wiki/ggcorrplot
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ggcorrplot-feedstock/blob/main/LICENSE.txt)
 
 Summary: The 'ggcorrplot' package can be used to visualize easily a correlation matrix using 'ggplot2'. It provides a solution for reordering the correlation matrix and displays the significance level on the plot. It also includes a function for computing a matrix of correlation p-values.
 
