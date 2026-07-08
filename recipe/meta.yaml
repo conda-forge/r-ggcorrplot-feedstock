@@ -1,4 +1,4 @@
-{% set version = "0.1.4.1" %}
+{% set version = "0.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ggcorrplot_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ggcorrplot/ggcorrplot_{{ version }}.tar.gz
-  sha256: b810950cff07e95865ddd042ad060a40e66414b69fc604b1242410ed6831a879
+  sha256: 2d6f84a8d2fab9865976bde55fd0034832110e7927973d933a73430b864e346d
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
